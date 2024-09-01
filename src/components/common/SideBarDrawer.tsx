@@ -25,10 +25,10 @@ const SideBarDrawer = (props: Props) => {
       <DrawerHeader>
         <div className="flex justify-center">
           <Avatar>
-            <AvatarImage src="/logo.png" alt="de-mawo" />
+            <AvatarImage src="/panda.jpg" alt="de-mawo" />
             <AvatarFallback>US</AvatarFallback>
           </Avatar>
-          <Image src="/panda.jpg" width={50} height={50} alt="logo"/>
+          {/* <Image src="/panda.jpg" width={50} height={50} alt="logo"/> */}
         </div>
       </DrawerHeader>
       <SideNavBar items={UserRoutes} className="p-4" />

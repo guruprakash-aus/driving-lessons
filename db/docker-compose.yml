@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  yaara_driving_institute_db:
+    image: "postgres:14.0"
+    ports:
+      - "5440:5432"
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      POSTGRES_USER: yaara_db
+      POSTGRES_PASSWORD: yaara_db_password
+      POSTGRES_DB: yaara_driving_institute_db
+    volumes:
+      - ./db-data/yaara_driving_institute_db/:/var/lib/postgresql/data

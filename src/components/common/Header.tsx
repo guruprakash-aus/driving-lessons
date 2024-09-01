@@ -1,5 +1,8 @@
 import React from 'react'
 import SideBarDrawer from './SideBarDrawer';
+import { AvatarNav } from './AvatarNav';
+import NotifyBtn from './NotifyBtn';
+import BasketItem from './basket-item';
 
 type Props = {}
 
@@ -16,6 +19,9 @@ const Header = (props: Props) => {
         {/* RIGHT SIDE  */}
 
         <div className="flex items-center space-x-3 md:space-x-6">
+          <AvatarNav user={null}/>
+          <NotifyBtn />
+          <BasketItem />
           {/* {user ? (
             <>
               <AvatarNav user={user} />
@@ -27,7 +33,7 @@ const Header = (props: Props) => {
               <AuthForm callbackUrl="/" />
             </DialogWrapper>
           )} */}
-          Right
+          
         </div>
       </div>
     </nav>
