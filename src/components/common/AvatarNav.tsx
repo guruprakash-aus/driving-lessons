@@ -12,21 +12,21 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { HiOutlineUser } from "react-icons/hi2";
 import { HiOutlineLockClosed } from "react-icons/hi2";
 import { LuLogOut } from "react-icons/lu";
-// import { User } from "next-auth";
+import { User } from "next-auth";
 import { RxDashboard } from "react-icons/rx";
 // import LogOutBtn from "./LogOutBtn";
 
 
 
 
-export function AvatarNav({user}: {user: any}) {
+export function AvatarNav({user}: {user: User}) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className=" h-8 w-8 rounded-full">
           <Avatar className="">
-          {/* <AvatarImage src={user?.image as string} alt="demawo" /> */}
-          <AvatarImage src="panda.jpg" />
+          <AvatarImage src={user?.image as string} alt="demawo" />
+          {/* <AvatarImage src="panda.jpg" /> */}
             <AvatarFallback>U</AvatarFallback>
           </Avatar>
         </Button>
